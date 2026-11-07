@@ -1,0 +1,20 @@
+{
+  "_comment": "Decisions the build depends on. Each one is listed in docs/VERIFY_CHECKLIST.md for the author to confirm or change. Change a value here and re-run the scripts; every table, number, and the map update together.",
+  "first_year": 2011,
+  "last_year": 2024,
+  "min_isolates": 20,
+  "hospital_subtypes": {
+    "01": "Short-term acute care hospital",
+    "11": "Critical access hospital"
+  },
+  "exclude_short_term_max_beds": 2,
+  "small_hospital_max_beds": 99,
+  "bed_bands": [
+    [0, 24, "1_24"],
+    [25, 49, "25_49"],
+    [50, 99, "50_99"],
+    [100, 199, "100_199"],
+    [200, 399, "200_399"],
+    [400, 100000, "400_plus"]
+  ]
+}

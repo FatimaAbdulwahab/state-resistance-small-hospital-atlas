@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>State Resistance Atlas</title>
+<meta name="description" content="State-by-year map joining CDC percent resistance for MRSA, CRE and VRE with counts of small and rural hospitals from the CMS Provider of Services file, 2011-2024.">
+<style>
+:root{
+  --surface:#fcfcfb; --surface-2:#f3f2ef; --border:#dcdad4; --grid:#e6e4df;
+  --text:#0b0b0b; --text-2:#52514e; --text-3:#77756f; --accent:#2a78d6;
+  --s1:#cde2fb; --s2:#86b6ef; --s3:#3987e5; --s4:#1c5cab; --s5:#0d366b;
+  --na:#e9e7e2; --na-ink:#b9b6ae; --stroke:#fcfcfb; --dot:#2a78d6; --dot-hi:#eb6834;
+  --draft-bg:#fff4d6; --draft-ink:#6b4a00;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --surface:#1a1a19; --surface-2:#242422; --border:#3a3a37; --grid:#2e2e2b;
+    --text:#f0efec; --text-2:#c3c2b7; --text-3:#9a9890; --accent:#3987e5;
+    --s1:#184f95; --s2:#256abf; --s3:#3987e5; --s4:#86b6ef; --s5:#cde2fb;
+    --na:#2c2c2a; --na-ink:#4a4a46; --stroke:#1a1a19; --dot:#3987e5; --dot-hi:#d95926;
+    --draft-bg:#3a2f12; --draft-ink:#f5d58a;
+  }
+}
+:root[data-theme="dark"]{
+    --surface:#1a1a19; --surface-2:#242422; --border:#3a3a37; --grid:#2e2e2b;
+    --text:#f0efec; --text-2:#c3c2b7; --text-3:#9a9890; --accent:#3987e5;
+    --s1:#184f95; --s2:#256abf; --s3:#3987e5; --s4:#86b6ef; --s5:#cde2fb;
+    --na:#2c2c2a; --na-ink:#4a4a46; --stroke:#1a1a19; --dot:#3987e5; --dot-hi:#d95926;
+    --draft-bg:#3a2f12; --draft-ink:#f5d58a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:24px 16px 64px}
+.draft{background:var(--draft-bg);color:var(--draft-ink);font-weight:600;font-size:13px;padding:8px 12px;border-radius:6px;margin-bottom:16px}
+h1{font-size:26px;line-height:1.2;margin:0 0 6px;font-weight:650;letter-spacing:-.01em}
+.lede{color:var(--text-2);max-width:760px;margin:0 0 20px}
+h2{font-size:17px;margin:36px 0 4px;font-weight:620}
+.sub{color:var(--text-2);font-size:13.5px;margin:0 0 12px;max-width:760px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:0 0 24px}
+.tile{border:1px solid var(--border);border-radius:8px;padding:12px 14px;background:var(--surface)}
+.tile .v{font-size:24px;font-weight:650;font-variant-numeric:tabular-nums}
+.tile .l{font-size:12.5px;color:var(--text-2)}
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:end;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--surface);z-index:5}
+.controls label{display:flex;flex-direction:column;font-size:12px;color:var(--text-2);gap:4px}
+select,input[type=range]{font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 8px;min-width:0}
+input[type=range]{padding:0;accent-color:var(--accent);width:180px}
+.yr{font-variant-numeric:tabular-nums;font-weight:600;color:var(--text)}
+.chart{position:relative;margin-top:12px}
+svg{display:block;width:100%;height:auto;overflow:visible}
+.state{stroke:var(--stroke);stroke-width:1;cursor:pointer}
+.state:hover,.state.hl{stroke:var(--text);stroke-width:1.6}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:12.5px;color:var(--text-2);margin:8px 0 0}
+.sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:5px;border:1px solid var(--border)}
+.hatch{background:repeating-linear-gradient(45deg,var(--na) 0 3px,var(--na-ink) 3px 4.5px)}
+.tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:13px;box-shadow:0 4px 18px rgba(0,0,0,.14);min-width:220px;max-width:280px;opacity:0;transition:opacity .08s;z-index:10}
+.tip b{display:block;font-size:14px;margin-bottom:4px}
+.tip .row{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums}
+.tip .row span:first-child{color:var(--text-2)}
+.tip .hr{border-top:1px solid var(--grid);margin:6px 0}
+.axis text{fill:var(--text-2);font-size:11.5px}
+.axis path,.axis line{stroke:var(--border)}
+.gridl line{stroke:var(--grid)}
+.gridl path{display:none}
+.ref{stroke:var(--text-3);stroke-dasharray:3 3;stroke-width:1}
+.dot{fill:var(--dot);stroke:var(--surface);stroke-width:2;cursor:pointer}
+.dot.hi{fill:var(--dot-hi)}
+.dlab{font-size:11.5px;fill:var(--text);font-weight:600;pointer-events:none}
+.axlab{font-size:12px;fill:var(--text-2)}
+.note{font-size:13px;color:var(--text-2);background:var(--surface-2);border-radius:8px;padding:12px 14px;margin-top:14px}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{padding:6px 8px;border-bottom:1px solid var(--grid);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--text-2);font-weight:600;cursor:pointer;user-select:none;position:sticky;top:0;background:var(--surface)}
+th[aria-sort]::after{content:" ▾";color:var(--text-3)}
+th[aria-sort="ascending"]::after{content:" ▴"}
+.tablewrap{max-height:520px;overflow:auto;border:1px solid var(--border);border-radius:8px}
+.muted{color:var(--text-3)}
+footer{margin-top:40px;font-size:13px;color:var(--text-2);border-top:1px solid var(--border);padding-top:16px}
+footer p{margin:6px 0}
+a{color:var(--accent)}
+.theme{margin-left:auto;font-size:12px}
+@media (max-width:600px){h1{font-size:21px}.theme{margin-left:0}input[type=range]{width:140px}}
+</style>
+</head>
+<body>
+<main>
+<!--DRAFT-->
+<h1>State Atlas of Hospital Resistance and Small Hospitals</h1>
+<p class="lede">Where antibiotic resistance among hospital infections is high, and how much of each state's hospital network is made up of small and rural hospitals. CDC percent resistance for MRSA, carbapenem-resistant Enterobacterales (CRE) and vancomycin-resistant enterococci (VRE), joined by state and year to Medicare-certified hospital counts from CMS, __FIRST__ to __LATEST__.</p>
+
+<div class="tiles" aria-label="Headline numbers for __LATEST__">
+  <div class="tile"><div class="v">__HOSP__</div><div class="l">general hospitals counted, __LATEST__</div></div>
+  <div class="tile"><div class="v">__PCT_SMALL__%</div><div class="l">have fewer than 100 beds</div></div>
+  <div class="tile"><div class="v">__PCT_BEDS_SMALL__%</div><div class="l">of hospital beds are in those small hospitals</div></div>
+  <div class="tile"><div class="v">__CAH__</div><div class="l">are critical access hospitals, a Medicare designation for small rural hospitals</div></div>
+</div>
+
+<div class="controls" role="group" aria-label="Map controls">
+  <label>Map shows
+    <select id="measure"></select>
+  </label>
+  <label>Year <span class="yr" id="yrlab"></span>
+    <input type="range" id="year" min="__FIRST__" max="__LATEST__" step="1" value="__LATEST__" aria-label="Year">
+  </label>
+  <label>Scatter organism
+    <select id="org"></select>
+  </label>
+  <label class="theme">Theme
+    <select id="theme"><option value="">Match device</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+</div>
+
+<h2 id="maptitle"></h2>
+<p class="sub" id="mapsub"></p>
+<div class="chart" id="mapwrap"><svg id="map" viewBox="0 0 975 640" role="img" aria-labelledby="maptitle"></svg><div class="tip" id="tip"></div></div>
+<div class="legend" id="legend"></div>
+
+<h2 id="sctitle"></h2>
+<p class="sub">Each dot is a state. Across: the share of its general hospitals that are both small (under 100 beds) and rural. Up: percent resistant. Dashed lines mark the top third of states on each measure for the selected year; orange dots are in the top third on both. The highest and lowest resistance are also labeled. This is a description, not a ranking: CDC advises against concluding that one state's resistance differs from another's or from the nation's.</p>
+<div class="chart" id="scwrap"><svg id="sc" viewBox="0 0 975 470" role="img" aria-labelledby="sctitle"></svg></div>
+
+<h2>Table for the selected year</h2>
+<p class="sub">Click a column heading to sort. "—" means CDC published no percent (fewer than 20 isolates tested, or none).</p>
+<div class="tablewrap"><table id="tbl"></table></div>
+
+<div class="note"><b>Read with care.</b> CDC's figures come from healthcare-associated infections (central line bloodstream infections, catheter urinary tract infections, and surgical site infections) that hospitals report to the National Healthcare Safety Network. They are not all clinical isolates, and reporting varies by state. CDC cautions against drawing conclusions about change over time or about one state compared with the nation. Hospital counts include active short-term acute care and critical access hospitals. "Rural" is the CMS flag, which marks about 1 in 5 critical access hospitals as urban; the "small and rural, or critical access" measure counts all of them. short-term hospitals listing 2 or fewer certified beds are left out (in 2020 to 2022 these were mostly temporary COVID-era enrollments of surgery centers and freestanding emergency rooms).</div>
+
+<footer>
+<p><b>Sources.</b> CDC Antimicrobial Resistance &amp; Patient Safety Portal, AR HAI dataset (<a href="https://arpsp.cdc.gov/psp/listing/antimicrobial-resistance">arpsp.cdc.gov</a>), accessed __ACCESS__. CMS Provider of Services File, Hospital &amp; Non-Hospital Facilities, December releases __FIRST__–__LATEST__ (<a href="https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file-hospital-non-hospital-facilities">data.cms.gov</a>). State shapes: us-atlas (U.S. Census Bureau cartographic boundaries).</p>
+<p><b>Dataset and citation.</b> Abdulwahab F. State Atlas of Hospital Resistance and Small Hospitals, version __VERSION__. Zenodo.__DOI__ Code and data: <a href="https://github.com/FatimaAbdulwahab/state-resistance-small-hospital-atlas">github.com/FatimaAbdulwahab/state-resistance-small-hospital-atlas</a>.</p>
+<p>Fatima Abdulwahab, Independent Researcher, Dallas, Texas · ORCID <a href="https://orcid.org/0009-0008-2298-8386">0009-0008-2298-8386</a> · Data CC BY 4.0, code MIT.</p>
+</footer>
+</main>
+
+<script src="vendor/d3.min.js"></script>
+<script src="vendor/topojson-client.min.js"></script>
+<script>
+const TOPO = /*__TOPO__*/null;
+const DATA = /*__DATA__*/null;
+const ORGS = {
+  mrsa:{name:"MRSA", long:"Methicillin-resistant Staphylococcus aureus", unit:"% of S. aureus tested that were methicillin resistant"},
+  cre:{name:"CRE", long:"Carbapenem-resistant Enterobacterales", unit:"% of Enterobacterales tested that were carbapenem resistant"},
+  vre_faecium:{name:"VRE, E. faecium", long:"Vancomycin-resistant Enterococcus faecium", unit:"% of E. faecium tested that were vancomycin resistant"},
+  vre_faecalis:{name:"VRE, E. faecalis", long:"Vancomycin-resistant Enterococcus faecalis", unit:"% of E. faecalis tested that were vancomycin resistant"},
+  vre_pooled:{name:"VRE, both species (derived)", long:"Vancomycin-resistant enterococci, E. faecalis and E. faecium pooled", unit:"% of enterococci tested that were vancomycin resistant (pooled by this atlas)"}
+};
+const HOSP = {
+  hsr:{name:"Small and rural hospitals", unit:"% of general hospitals with under 100 beds and in a rural location"},
+  hsm:{name:"Small hospitals", unit:"% of general hospitals with under 100 beds"},
+  hru:{name:"Rural hospitals", unit:"% of general hospitals in a rural location"},
+  hsc:{name:"Small and rural, or critical access", unit:"% of general hospitals that are small and rural by the CMS flag, or critical access hospitals whatever their flag or bed count"},
+  hca:{name:"Critical access hospitals", unit:"% of general hospitals that are critical access hospitals"},
+  hbs:{name:"Beds in small hospitals", unit:"% of general hospital beds that are in hospitals with under 100 beds"}
+};
+const $ = s => document.querySelector(s);
+const fmt = v => v == null ? "—" : (Math.round(v*10)/10).toFixed(1);
+const int = v => v == null ? "—" : d3.format(",")(v);
+const msel = $("#measure"), osel = $("#org");
+const g1 = document.createElement("optgroup"); g1.label = "Resistance (CDC)";
+Object.entries(ORGS).forEach(([k,o]) => g1.append(new Option(o.name, "r:"+k)));
+const g2 = document.createElement("optgroup"); g2.label = "Hospitals (CMS)";
+Object.entries(HOSP).forEach(([k,o]) => g2.append(new Option(o.name, "h:"+k)));
+msel.append(g1, g2);
+Object.entries(ORGS).forEach(([k,o]) => osel.append(new Option(o.name, k)));
+let state = {measure:"r:mrsa", year:+$("#year").value, org:"mrsa"};
+try { const t = localStorage.getItem("atlas-theme"); if (t) { $("#theme").value = t; document.documentElement.dataset.theme = t; } } catch(e) {}
+$("#theme").onchange = e => { const v = e.target.value; if (v) document.documentElement.dataset.theme = v; else delete document.documentElement.dataset.theme; try { localStorage.setItem("atlas-theme", v); } catch(e) {} };
+
+const byYear = d3.group(DATA.rows, d => d.y);
+function val(row, key){
+  const [kind, k] = key.split(":");
+  if (kind === "r") return row[k] ? row[k][0] : null;
+  return row[k];
+}
+// Fixed class breaks per measure across all years (quintiles), so a color means the same thing every year.
+const breaks = {};
+function getBreaks(key){
+  if (breaks[key]) return breaks[key];
+  const vals = DATA.rows.map(r => val(r, key)).filter(v => v != null).sort(d3.ascending);
+  const b = [0.2,0.4,0.6,0.8].map(q => Math.round(d3.quantileSorted(vals, q)*10)/10);
+  return breaks[key] = b;
+}
+const ramp = ["--s1","--s2","--s3","--s4","--s5"];
+const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+// ---------- map
+const svg = d3.select("#map");
+const states = topojson.feature(TOPO, TOPO.objects.states).features.filter(f => DATA.fips.includes(f.id));
+const main48 = states.filter(f => f.id !== "72");
+const pr = states.filter(f => f.id === "72");
+const proj = d3.geoAlbersUsa().fitExtent([[10,10],[965,600]], {type:"FeatureCollection", features:main48});
+const path = d3.geoPath(proj);
+const prProj = d3.geoMercator().fitExtent([[835,560],[945,610]], {type:"FeatureCollection", features:pr});
+const prPath = d3.geoPath(prProj);
+const defs = svg.append("defs");
+const pat = defs.append("pattern").attr("id","hatch").attr("patternUnits","userSpaceOnUse").attr("width",6).attr("height",6).attr("patternTransform","rotate(45)");
+pat.append("rect").attr("width",6).attr("height",6).attr("fill","var(--na)");
+pat.append("line").attr("x1",0).attr("y1",0).attr("x2",0).attr("y2",6).attr("stroke","var(--na-ink)").attr("stroke-width",1.5);
+const gStates = svg.append("g");
+gStates.selectAll("path.m").data(main48).join("path").attr("class","state m").attr("d",path);
+gStates.selectAll("path.p").data(pr).join("path").attr("class","state p").attr("d",prPath);
+svg.append("text").attr("x",890).attr("y",628).attr("text-anchor","middle").attr("class","axlab").text("Puerto Rico");
+const tip = $("#tip");
+function showTip(ev, row, wrap){
+  const y = state.year;
+  const r = k => row[k] ? `${fmt(row[k][0])}% <span class="muted">(${int(row[k][1])}/${int(row[k][2])})</span>` : `<span class="muted">insufficient data</span>`;
+  tip.innerHTML = `<b>${row.name}, ${y}</b>`
+   + Object.keys(ORGS).map(k => `<div class="row"><span>${ORGS[k].name.replace(" (derived)","")}</span><span>${r(k)}</span></div>`).join("")
+   + `<div class="hr"></div>`
+   + `<div class="row"><span>General hospitals</span><span>${int(row.ht)}</span></div>`
+   + `<div class="row"><span>Under 100 beds</span><span>${int(row.nsm)} (${fmt(row.hsm)}%)</span></div>`
+   + `<div class="row"><span>Rural</span><span>${int(row.nru)} (${fmt(row.hru)}%)</span></div>`
+   + `<div class="row"><span>Small and rural</span><span>${int(row.nsr)} (${fmt(row.hsr)}%)</span></div>`
+   + `<div class="row"><span>Critical access</span><span>${int(row.nca)}${row.ncu ? ` <span class="muted">(${row.ncu} flagged urban)</span>` : ""}</span></div>`
+   + `<div class="row"><span>Beds in small hospitals</span><span>${fmt(row.hbs)}%</span></div>`;
+  const box = wrap.getBoundingClientRect();
+  let x = ev.clientX - box.left + 14, yy = ev.clientY - box.top + 14;
+  if (x + 290 > box.width) x = ev.clientX - box.left - 290;
+  if (x < 0) x = 4;
+  tip.style.left = x + "px"; tip.style.top = yy + "px"; tip.style.opacity = 1;
+  wrap.append(tip);
+}
+function hideTip(){ tip.style.opacity = 0; }
+
+function drawMap(){
+  const rows = new Map((byYear.get(state.year) || []).map(r => [r.f, r]));
+  const b = getBreaks(state.measure);
+  const color = v => v == null ? "url(#hatch)" : `var(${ramp[d3.bisectRight(b, v)]})`;
+  gStates.selectAll("path.state")
+    .attr("fill", f => color(rows.get(f.id) ? val(rows.get(f.id), state.measure) : null))
+    .on("mousemove", (ev,f) => rows.get(f.id) && showTip(ev, rows.get(f.id), $("#mapwrap")))
+    .on("mouseleave", hideTip)
+    .selectAll("title").data(f => [f]).join("title")
+    .text(f => { const r = rows.get(f.id); if (!r) return ""; const v = val(r, state.measure); return `${r.name}: ${v == null ? "insufficient data" : fmt(v) + "%"}`; });
+  const [kind, k] = state.measure.split(":");
+  const meta = kind === "r" ? ORGS[k] : HOSP[k];
+  $("#maptitle").textContent = `${meta.name}, ${state.year}`;
+  $("#mapsub").textContent = meta.unit + (kind === "r" ? ". Source: CDC AR & Patient Safety Portal, all three infection types combined." : ". Source: CMS Provider of Services file, December.");
+  const labs = [`under ${b[0]}%`, `${b[0]}–${b[1]}%`, `${b[1]}–${b[2]}%`, `${b[2]}–${b[3]}%`, `${b[3]}% or more`];
+  $("#legend").innerHTML = labs.map((l,i) => `<span><span class="sw" style="background:var(${ramp[i]})"></span>${l}</span>`).join("")
+    + (kind === "r" ? `<span><span class="sw hatch"></span>insufficient data</span>` : "")
+    + `<span class="muted">Color steps are fixed across all years for this measure.</span>`;
+}
+
+// ---------- scatter
+const sc = d3.select("#sc"), W = 975, H = 470, m = {t:16,r:24,b:52,l:56};
+const gx = sc.append("g").attr("class","gridl"), gy = sc.append("g").attr("class","gridl");
+const ax = sc.append("g").attr("class","axis").attr("transform",`translate(0,${H-m.b})`);
+const ay = sc.append("g").attr("class","axis").attr("transform",`translate(${m.l},0)`);
+const refs = sc.append("g"), dots = sc.append("g"), labs = sc.append("g");
+sc.append("text").attr("class","axlab").attr("x",(W+m.l)/2).attr("y",H-12).attr("text-anchor","middle").text("Share of general hospitals that are small (under 100 beds) and rural, %");
+const ylab = sc.append("text").attr("class","axlab").attr("transform",`translate(16,${(H-m.b+m.t)/2}) rotate(-90)`).attr("text-anchor","middle");
+function drawScatter(){
+  const rows = (byYear.get(state.year) || []).filter(r => r[state.org]);
+  const o = ORGS[state.org];
+  $("#sctitle").textContent = `${o.name} resistance against small-and-rural hospital share, ${state.year}`;
+  ylab.text(`${o.name}, % resistant`);
+  const x = d3.scaleLinear().domain([0, 100]).range([m.l, W-m.r]);
+  const yMax = d3.max(DATA.rows, r => r[state.org] ? r[state.org][0] : 0);
+  const y = d3.scaleLinear().domain([0, Math.max(5, yMax)]).nice().range([H-m.b, m.t]);
+  ax.call(d3.axisBottom(x).ticks(10).tickSizeOuter(0));
+  ay.call(d3.axisLeft(y).ticks(6).tickSizeOuter(0));
+  gx.attr("transform",`translate(0,${H-m.b})`).call(d3.axisBottom(x).ticks(10).tickSize(-(H-m.b-m.t)).tickFormat(""));
+  gy.attr("transform",`translate(${m.l},0)`).call(d3.axisLeft(y).ticks(6).tickSize(-(W-m.l-m.r)).tickFormat(""));
+  const all = byYear.get(state.year) || [];
+  const tx = d3.quantile(all.map(r => r.hsr).sort(d3.ascending), 2/3);
+  const ty = d3.quantile(rows.map(r => r[state.org][0]).sort(d3.ascending), 2/3);
+  refs.selectAll("line").data(rows.length ? [0,1] : []).join("line").attr("class","ref")
+    .attr("x1", i => i ? m.l : x(tx)).attr("x2", i => i ? W-m.r : x(tx))
+    .attr("y1", i => i ? y(ty) : m.t).attr("y2", i => i ? y(ty) : H-m.b);
+  const hi = r => r.hsr >= tx && r[state.org][0] >= ty;
+  // Also label the highest and lowest resistance so extremes are never anonymous dots.
+  const ext = new Set(rows.length ? [d3.greatest(rows, r => r[state.org][0]).u, d3.least(rows, r => r[state.org][0]).u] : []);
+  dots.selectAll("circle").data(rows, r => r.u).join("circle")
+    .attr("class", r => "dot" + (hi(r) ? " hi" : ""))
+    .attr("r", 6).attr("cx", r => x(r.hsr)).attr("cy", r => y(r[state.org][0]))
+    .on("mousemove", (ev, r) => showTip(ev, r, $("#scwrap"))).on("mouseleave", hideTip)
+    .selectAll("title").data(r => [r]).join("title").text(r => `${r.name}: ${fmt(r[state.org][0])}% resistant; ${fmt(r.hsr)}% small and rural`);
+  labs.selectAll("text").data(rows.filter(r => hi(r) || ext.has(r.u)), r => r.u).join("text").attr("class","dlab")
+    .attr("x", r => x(r.hsr) + 9).attr("y", r => y(r[state.org][0]) + 4).text(r => r.u);
+}
+
+// ---------- table
+const cols = [
+  {k:"name", t:"State", f:r => r.name, s:r => r.name},
+  ...Object.keys(ORGS).map(k => ({k, t:ORGS[k].name.replace(" (derived)","") + " %R", f:r => fmt(r[k] && r[k][0]), s:r => r[k] ? r[k][0] : -1})),
+  {k:"ht", t:"Hospitals", f:r => int(r.ht), s:r => r.ht},
+  {k:"hsm", t:"% small", f:r => fmt(r.hsm), s:r => r.hsm},
+  {k:"hru", t:"% rural", f:r => fmt(r.hru), s:r => r.hru},
+  {k:"hsr", t:"% small & rural", f:r => fmt(r.hsr), s:r => r.hsr},
+  {k:"hsc", t:"% small & rural or CAH", f:r => fmt(r.hsc), s:r => r.hsc},
+  {k:"nca", t:"Critical access", f:r => int(r.nca), s:r => r.nca},
+  {k:"hbs", t:"% beds in small", f:r => fmt(r.hbs), s:r => r.hbs},
+];
+let sortK = "name", sortAsc = true;
+function drawTable(){
+  const rows = [...(byYear.get(state.year) || [])];
+  const c = cols.find(c => c.k === sortK);
+  rows.sort((a,b) => (sortAsc ? 1 : -1) * d3.ascending(c.s(a), c.s(b)));
+  const t = $("#tbl");
+  t.innerHTML = `<thead><tr>${cols.map(c => `<th data-k="${c.k}" ${c.k===sortK ? `aria-sort="${sortAsc?"ascending":"descending"}"` : ""}>${c.t}</th>`).join("")}</tr></thead>`
+    + `<tbody>${rows.map(r => `<tr>${cols.map(c => `<td>${c.f(r)}</td>`).join("")}</tr>`).join("")}</tbody>`;
+  t.querySelectorAll("th").forEach(th => th.onclick = () => { const k = th.dataset.k; sortAsc = sortK === k ? !sortAsc : k === "name"; sortK = k; drawTable(); });
+}
+
+function render(){ $("#yrlab").textContent = state.year; drawMap(); drawScatter(); drawTable(); }
+msel.onchange = e => { state.measure = e.target.value; const [kind,k] = state.measure.split(":"); if (kind === "r") { state.org = k; osel.value = k; } render(); };
+osel.onchange = e => { state.org = e.target.value; render(); };
+$("#year").oninput = e => { state.year = +e.target.value; render(); };
+render();
+</script>
+</body>
+</html>

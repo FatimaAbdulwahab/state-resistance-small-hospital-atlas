@@ -1,0 +1,11 @@
+# secrets
+.env
+*.pem
+# caches
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+# scratch
+scratch/
+*.zip

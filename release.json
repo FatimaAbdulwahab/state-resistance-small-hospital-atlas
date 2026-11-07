@@ -1,0 +1,7 @@
+{
+  "_comment": "Release metadata read by the map page, CITATION.cff and the publish scripts. Fill in doi after Zenodo mints it, then rebuild with --final.",
+  "version": "1.0.0",
+  "doi": "",
+  "repository": "https://github.com/FatimaAbdulwahab/state-resistance-small-hospital-atlas",
+  "pages_url": "https://fatimaabdulwahab.github.io/state-resistance-small-hospital-atlas/"
+}

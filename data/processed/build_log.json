@@ -1,0 +1,130 @@
+{
+  "resistance": {
+    "cdc_rows_in": 11888,
+    "cdc_rows_dropped_non_state": 240,
+    "cdc_dropped_labels": [
+      "New England",
+      "No Geography Data"
+    ],
+    "cdc_rows_kept": 11648
+  },
+  "hospitals_by_year": {
+    "2011": {
+      "pos_hospital_rows": 12056,
+      "target_subtypes": 8488,
+      "active": 4884,
+      "in_52_states": 4879,
+      "excluded_tiny": 3,
+      "counted": 4876
+    },
+    "2012": {
+      "pos_hospital_rows": 12130,
+      "target_subtypes": 8515,
+      "active": 4865,
+      "in_52_states": 4860,
+      "excluded_tiny": 3,
+      "counted": 4857
+    },
+    "2013": {
+      "pos_hospital_rows": 12205,
+      "target_subtypes": 8552,
+      "active": 4839,
+      "in_52_states": 4834,
+      "excluded_tiny": 1,
+      "counted": 4833
+    },
+    "2014": {
+      "pos_hospital_rows": 12286,
+      "target_subtypes": 8594,
+      "active": 4814,
+      "in_52_states": 4809,
+      "excluded_tiny": 2,
+      "counted": 4807
+    },
+    "2015": {
+      "pos_hospital_rows": 12375,
+      "target_subtypes": 8635,
+      "active": 4784,
+      "in_52_states": 4779,
+      "excluded_tiny": 2,
+      "counted": 4777
+    },
+    "2016": {
+      "pos_hospital_rows": 12461,
+      "target_subtypes": 8673,
+      "active": 4766,
+      "in_52_states": 4760,
+      "excluded_tiny": 1,
+      "counted": 4759
+    },
+    "2017": {
+      "pos_hospital_rows": 12523,
+      "target_subtypes": 8694,
+      "active": 4745,
+      "in_52_states": 4739,
+      "excluded_tiny": 1,
+      "counted": 4738
+    },
+    "2018": {
+      "pos_hospital_rows": 12583,
+      "target_subtypes": 8719,
+      "active": 4705,
+      "in_52_states": 4699,
+      "excluded_tiny": 1,
+      "counted": 4698
+    },
+    "2019": {
+      "pos_hospital_rows": 12656,
+      "target_subtypes": 8757,
+      "active": 4652,
+      "in_52_states": 4646,
+      "excluded_tiny": 1,
+      "counted": 4645
+    },
+    "2020": {
+      "pos_hospital_rows": 12981,
+      "target_subtypes": 9040,
+      "active": 4835,
+      "in_52_states": 4829,
+      "excluded_tiny": 225,
+      "counted": 4604
+    },
+    "2021": {
+      "pos_hospital_rows": 13137,
+      "target_subtypes": 9148,
+      "active": 4871,
+      "in_52_states": 4865,
+      "excluded_tiny": 273,
+      "counted": 4592
+    },
+    "2022": {
+      "pos_hospital_rows": 13204,
+      "target_subtypes": 9172,
+      "active": 4827,
+      "in_52_states": 4821,
+      "excluded_tiny": 240,
+      "counted": 4581
+    },
+    "2023": {
+      "pos_hospital_rows": 13321,
+      "target_subtypes": 9218,
+      "active": 4555,
+      "in_52_states": 4549,
+      "excluded_tiny": 5,
+      "counted": 4544
+    },
+    "2024": {
+      "pos_hospital_rows": 13430,
+      "target_subtypes": 9258,
+      "active": 4509,
+      "in_52_states": 4503,
+      "excluded_tiny": 3,
+      "counted": 4500
+    }
+  },
+  "join": {
+    "both": 728,
+    "left_only": 0,
+    "right_only": 0
+  }
+}

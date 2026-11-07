@@ -1,0 +1,85 @@
+QA REPORT - State Atlas of Hospital Resistance and Small Hospitals
+Config: {"first_year": 2011, "last_year": 2024, "min_isolates": 20, "hospital_subtypes": {"01": "Short-term acute care hospital", "11": "Critical access hospital"}, "exclude_short_term_max_beds": 2, "small_hospital_max_beds": 99, "bed_bands": [[0, 24, "1_24"], [25, 49, "25_49"], [50, 99, "50_99"], [100, 199, "100_199"], [200, 399, "200_399"], [400, 100000, "400_plus"]]}
+
+== 1. Row counts and coverage ==
+[PASS] atlas has 52 places x 14 years = 728 rows -- 728 rows
+[PASS] no duplicate state-year rows
+[PASS] join matched every state-year on both sides -- {'both': 728, 'left_only': 0, 'right_only': 0}
+CDC rows read: 11888; dropped as non-state labels: 240 (New England, No Geography Data); kept: 11648
+Hospitals by year (POS hospital rows -> target types -> active -> 52 places -> excluded tiny -> counted):
+  2011: 12056 -> 8488 -> 4884 -> 4879 -> -3 -> 4876
+  2012: 12130 -> 8515 -> 4865 -> 4860 -> -3 -> 4857
+  2013: 12205 -> 8552 -> 4839 -> 4834 -> -1 -> 4833
+  2014: 12286 -> 8594 -> 4814 -> 4809 -> -2 -> 4807
+  2015: 12375 -> 8635 -> 4784 -> 4779 -> -2 -> 4777
+  2016: 12461 -> 8673 -> 4766 -> 4760 -> -1 -> 4759
+  2017: 12523 -> 8694 -> 4745 -> 4739 -> -1 -> 4738
+  2018: 12583 -> 8719 -> 4705 -> 4699 -> -1 -> 4698
+  2019: 12656 -> 8757 -> 4652 -> 4646 -> -1 -> 4645
+  2020: 12981 -> 9040 -> 4835 -> 4829 -> -225 -> 4604
+  2021: 13137 -> 9148 -> 4871 -> 4865 -> -273 -> 4592
+  2022: 13204 -> 9172 -> 4827 -> 4821 -> -240 -> 4581
+  2023: 13321 -> 9218 -> 4555 -> 4549 -> -5 -> 4544
+  2024: 13430 -> 9258 -> 4509 -> 4503 -> -3 -> 4500
+
+== 2. Resistance values ==
+[PASS] mrsa: percent = resistant / tested, rounded half-up (max gap 0.00)
+[PASS] mrsa: 0 <= percent <= 100
+[PASS] mrsa: every reported value has >= 20 isolates tested
+[PASS] mrsa: CDC confidence interval contains the percent
+[PASS] mrsa: insufficient-data cells carry no percent (never shown as 0%) -- 68 cells insufficient of 728
+[PASS] cre: percent = resistant / tested, rounded half-up (max gap 0.00)
+[PASS] cre: 0 <= percent <= 100
+[PASS] cre: every reported value has >= 20 isolates tested
+[PASS] cre: CDC confidence interval contains the percent
+[PASS] cre: insufficient-data cells carry no percent (never shown as 0%) -- 39 cells insufficient of 728
+[PASS] vre_faecalis: percent = resistant / tested, rounded half-up (max gap 0.00)
+[PASS] vre_faecalis: 0 <= percent <= 100
+[PASS] vre_faecalis: every reported value has >= 20 isolates tested
+[PASS] vre_faecalis: CDC confidence interval contains the percent
+[PASS] vre_faecalis: insufficient-data cells carry no percent (never shown as 0%) -- 93 cells insufficient of 728
+[PASS] vre_faecium: percent = resistant / tested, rounded half-up (max gap 0.00)
+[PASS] vre_faecium: 0 <= percent <= 100
+[PASS] vre_faecium: every reported value has >= 20 isolates tested
+[PASS] vre_faecium: CDC confidence interval contains the percent
+[PASS] vre_faecium: insufficient-data cells carry no percent (never shown as 0%) -- 227 cells insufficient of 728
+[PASS] mid-P method reproduces CDC's 95% CI on 300 random cells (within 0.1 point) -- 100.0% within 0.1; max gap 0.00
+[PASS] pooled VRE counts = E. faecalis + E. faecium counts
+[PASS] mrsa: sum of published state counts <= national total every year -- state share of national isolates 99%-100%
+[PASS] cre: sum of published state counts <= national total every year -- state share of national isolates 99%-100%
+[PASS] vre_faecalis: sum of published state counts <= national total every year -- state share of national isolates 98%-100%
+[PASS] vre_faecium: sum of published state counts <= national total every year -- state share of national isolates 92%-98%
+
+== 3. Hospital counts ==
+[PASS] short-term + critical access = total
+[PASS] rural + urban + unknown = total
+[PASS] bed-size bands add up to total
+[PASS] small-and-rural <= small and <= rural
+[PASS] every state has at least one counted hospital every year
+[PASS] small-and-rural <= small-rural-or-critical-access <= total
+[PASS] critical access hospitals flagged urban <= critical access
+  Critical access hospitals 2024: 1368; CMS urban flag 266; more than 25 certified beds 68 (max 138)
+  2011: 4876 hospitals (3546 short-term, 1330 critical access); 2555 small; 2077 rural
+  2019: 4645 hospitals (3290 short-term, 1355 critical access); 2395 small; 1863 rural
+  2020: 4604 hospitals (3252 short-term, 1352 critical access); 2381 small; 1840 rural
+  2022: 4581 hospitals (3222 short-term, 1359 critical access); 2374 small; 1832 rural
+  2023: 4544 hospitals (3179 short-term, 1365 critical access); 2350 small; 1813 rural
+  2024: 4500 hospitals (3132 short-term, 1368 critical access); 2322 small; 1792 rural
+Excluded tiny short-term hospitals by year: {'2011': 3, '2012': 3, '2013': 1, '2014': 2, '2015': 2, '2016': 1, '2017': 1, '2018': 1, '2019': 1, '2020': 225, '2021': 273, '2022': 240, '2023': 5, '2024': 3}
+State-years with >10% change in hospital count from prior year (review): DC 2020 (-14%)
+
+== 4. Named spot checks (verify by hand; see docs/VERIFY_CHECKLIST.md) ==
+  TX 2024 mrsa: 43.1% (270/627)
+  AL 2024 mrsa: 52.5% (63/120)
+  MS 2024 mrsa: 58.2% (57/98)
+  NY 2024 cre: 2.7% (38/1400)
+  AK 2024 mrsa: insufficient data
+  VT 2011 mrsa: insufficient data
+  CA 2015 vre_faecium: 76.0% (556/732)
+  TX 2024: hospitals 372, critical access 91, small (<100 beds) 220, rural 132
+  IA 2024: hospitals 113, critical access 83, small (<100 beds) 90, rural 80
+  WY 2024: hospitals 27, critical access 17, small (<100 beds) 23, rural 24
+  NJ 2024: hospitals 61, critical access 0, small (<100 beds) 1, rural 0
+
+== 5. Summary ==
+Checks failed: 0

@@ -1,0 +1,16 @@
+{
+  "upload_type": "dataset",
+  "title": "State Atlas of Hospital Resistance and Small Hospitals",
+  "creators": [
+    {"name": "Abdulwahab, Fatima", "affiliation": "Independent Researcher, Dallas, Texas, USA", "orcid": "0009-0008-2298-8386"}
+  ],
+  "description": "<p>An open state-by-year table (50 states, the District of Columbia and Puerto Rico, 2011 to 2024; 728 rows) joining CDC Antimicrobial Resistance &amp; Patient Safety Portal percent resistance for methicillin-resistant <i>Staphylococcus aureus</i>, carbapenem-resistant Enterobacterales and vancomycin-resistant <i>Enterococcus faecalis</i> and <i>E. faecium</i> (with resistant counts, isolates tested and 95% confidence intervals) to counts of active Medicare-certified short-term acute care and critical access hospitals by certified bed size and rural location from the CMS Provider of Services file (December release of each year). Includes the reproducible pipeline, a quality-assurance report, a codebook, a facility-level hospital list, and a public state map.</p>",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "version": "1.0.0",
+  "keywords": ["antimicrobial resistance", "MRSA", "CRE", "VRE", "NHSN", "critical access hospitals", "rural hospitals", "Provider of Services file", "state surveillance"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/FatimaAbdulwahab/state-resistance-small-hospital-atlas", "relation": "isSupplementTo", "scheme": "url"},
+    {"identifier": "https://fatimaabdulwahab.github.io/state-resistance-small-hospital-atlas/", "relation": "isDocumentedBy", "scheme": "url"}
+  ]
+}

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this dataset or map, please cite it as below."
+type: dataset
+title: "State Atlas of Hospital Resistance and Small Hospitals"
+abstract: "An open state-by-year table (50 states, District of Columbia and Puerto Rico, 2011-2024) joining CDC Antimicrobial Resistance & Patient Safety Portal percent resistance for MRSA, carbapenem-resistant Enterobacterales and vancomycin-resistant enterococci to counts of active short-term acute care and critical access hospitals by bed size and rural location from the CMS Provider of Services file, with a public state map."
+version: "1.0.0"
+authors:
+  - family-names: "Abdulwahab"
+    given-names: "Fatima"
+    affiliation: "Independent Researcher, Dallas, Texas, USA"
+    orcid: "https://orcid.org/0009-0008-2298-8386"
+    email: "abdulwahabfatima43@gmail.com"
+license: CC-BY-4.0
+repository-code: "https://github.com/FatimaAbdulwahab/state-resistance-small-hospital-atlas"
+url: "https://fatimaabdulwahab.github.io/state-resistance-small-hospital-atlas/"
+keywords:
+  - antimicrobial resistance
+  - MRSA
+  - carbapenem-resistant Enterobacterales
+  - vancomycin-resistant enterococci
+  - NHSN
+  - critical access hospitals
+  - rural hospitals
+  - Provider of Services file
+  - state surveillance

@@ -1,0 +1,169 @@
+phenotype_key,phenotype,facility,facility_label,year,percentResistant,resistantCount,isolatesTestedCount,lowerCi,upperCi,suppressed
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2024,37.7,3548,9420,36.7,38.6,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2024,70.1,94,134,62,77.4,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2024,68,17,25,48.1,83.9,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2023,37.7,3639,9664,36.7,38.6,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2023,66.4,89,134,58.1,74,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2023,56.5,13,23,36.1,75.4,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2022,37.5,3728,9936,36.599998474121094,38.5,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2022,74.4,125,168,67.4000015258789,80.5999984741211,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2022,42.9,12,28,25.700000762939453,61.400001525878906,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2021,39.2,3980,10149,38.3,40.2,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2021,78.7,137,174,72.2,84.3,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2021,81,17,21,60.2,93.6,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2020,40,3706,9266,39.001223,40.995969,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2020,69.7,136,195,63.021287,75.883421,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2020,50,11,22,29.78096,70.21904,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2019,40,4648,11614,39.13245,40.914369,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2019,67.5,170,252,61.488727,73.032718,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2019,53.8,21,39,38.206071,68.933692,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2018,41.3,4885,11816,40.456243,42.232371,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2018,70.2,221,315,64.929423,75.019502,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2018,70.7,29,41,55.550282,83.073463,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2017,41.9,5129,12249,41.000988,42.74867,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2017,75,255,340,70.189762,79.38652,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2017,60,24,40,44.369659,74.22821,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2016,43.2,5443,12597,42.345331,44.074834,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2016,76,342,450,71.889847,79.776733,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2016,51.4,18,35,35.092294,67.536904,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2015,44.3,5704,12877,43.439324,45.154932,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2015,81.1,441,544,77.60915,84.193597,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2015,65.1,28,43,50.082681,78.173988,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2014,44,5019,11415,43.059721,44.880292,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2014,76.5,302,395,72.081158,80.443814,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2014,57.4,31,54,43.998535,70.04071,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2013,45.5,5155,11341,44.539365,46.372154,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2013,81.1,364,449,77.245737,84.492941,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2013,66.7,44,66,54.675547,77.223969,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2012,46,5107,11103,45.070484,46.924844,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2012,77.9,240,308,73.031438,82.289758,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2012,64.1,25,39,48.273038,77.906173,False
+MRSA,Methicillin-resistant Staphylococcus aureus,109,General Acute Care Hospitals,2011,45.7,3591,7857,44.604327,46.807594,False
+MRSA,Methicillin-resistant Staphylococcus aureus,110,Long Term Acute Care Hospitals,2011,80.6,162,201,74.692991,85.625105,False
+MRSA,Methicillin-resistant Staphylococcus aureus,111,Inpatient Rehabilitation Facilities,2011,0,0,0,,,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2024,3.1,687,22098,2.9,3.3,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2024,8.7,77,883,7,10.7,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2024,1.2,8,692,0.5,2.2,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2023,3,689,22631,2.8,3.3,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2023,8.7,72,832,6.9,10.7,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2023,1.6,11,701,0.8,2.7,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2022,2.8,640,23023,2.5999999046325684,3,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2022,12.6,129,1023,10.699999809265137,14.800000190734863,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2022,1.7,10,598,0.8999999761581421,3,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2021,2.4,580,23979,2.2,2.6,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2021,10.3,111,1075,8.6,12.3,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2021,1.9,12,639,1,3.2,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2020,2.2,451,20212,2.034416,2.442069,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2020,10.3,119,1160,8.60969,12.105524,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2020,2.1,11,525,1.106701,3.612675,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2019,2,450,22427,1.828687,2.196034,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2019,10.5,120,1145,8.804095,12.356156,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2019,1,6,580,0.420511,2.138739,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2018,2.2,525,23673,2.036065,2.411308,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2018,11.1,153,1377,9.531318,12.853665,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2018,0.8,5,605,0.303057,1.821799,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2017,2,439,21952,1.820635,2.191598,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2017,11.7,171,1460,10.137841,13.438381,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2017,1.5,8,549,0.679147,2.748449,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2016,2.4,539,22637,2.188352,2.585498,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2016,12.1,204,1684,10.620095,13.738341,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2016,2.1,12,577,1.131509,3.508499,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2015,2.4,552,23007,2.207434,2.602927,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2015,15.7,301,1920,14.102581,17.355217,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2015,1.1,6,525,0.464565,2.3613,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2014,2.5,546,21928,2.289663,2.702363,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2014,12,217,1808,10.564569,13.561469,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2014,1.9,12,640,1.01944,3.16602,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2013,2.9,598,20637,2.675216,3.132922,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2013,13.6,295,2164,12.23475,15.126955,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2013,2.4,18,742,1.489225,3.73347,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2012,2.6,518,20083,2.366768,2.805619,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2012,14,155,1104,12.083924,16.184071,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2012,1.7,7,411,0.748044,3.339919,False
+CRE,Carbapenem-resistant Enterobacterales,109,General Acute Care Hospitals,2011,3.5,350,9893,3.187611,3.915764,False
+CRE,Carbapenem-resistant Enterobacterales,110,Long Term Acute Care Hospitals,2011,14.7,99,672,12.202304,17.564929,False
+CRE,Carbapenem-resistant Enterobacterales,111,Inpatient Rehabilitation Facilities,2011,5.6,7,124,2.501802,10.845864,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2024,3.2,230,7228,2.8,3.6,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2024,19.5,43,221,14.6,25.1,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2024,0,0,90,0,3.3,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2023,3.3,247,7586,2.9,3.7,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2023,16.1,41,254,12,21.1,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2023,1.9,2,103,0.3,6.3,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2022,3.4,280,8318,3,3.799999952316284,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2022,18,51,283,13.899999618530273,22.799999237060547,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2022,4,4,101,1.2999999523162842,9.300000190734863,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2021,2.9,302,10244,2.6,3.3,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2021,15.2,57,375,11.8,19.1,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2021,6.2,5,81,2.3,13.1,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2020,2.7,230,8368,2.414054,3.11547,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2020,18.1,69,381,14.484375,22.219656,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2020,7.5,7,93,3.351355,14.319922,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2019,3.7,275,7497,3.260215,4.111679,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2019,17.6,56,318,13.715674,22.091562,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2019,2.5,2,80,0.421448,8.013906,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2018,4.2,325,7741,3.76869,4.662916,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2018,16.2,75,464,13.02308,19.725514,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2018,4.3,4,92,1.396644,10.153497,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2017,4.4,354,7963,4.008982,4.915416,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2017,18.9,93,492,15.625028,22.544565,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2017,5.4,5,92,2.018472,11.632617,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2016,4.9,405,8289,4.437176,5.366019,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2016,21.5,138,642,18.446635,24.800595,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2016,7.5,7,93,3.351355,14.319922,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2015,6,534,8872,5.538053,6.528378,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2015,24.9,201,806,22.041804,28.013532,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2015,10.8,9,83,5.41937,18.963393,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2014,4.8,357,7406,4.349966,5.326188,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2014,25.3,168,664,22.103422,28.71352,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2014,10.3,12,117,5.677522,16.78458,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2013,5.1,369,7169,4.653619,5.677249,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2013,23.9,182,760,21.013509,27.07919,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2013,8,13,163,4.508102,12.926961,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2012,5.4,365,6759,4.880424,5.958472,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2012,24.1,125,519,20.551957,27.905387,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2012,12.3,10,81,6.444484,20.901324,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,109,General Acute Care Hospitals,2011,6.7,268,3984,5.980067,7.536372,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,110,Long Term Acute Care Hospitals,2011,21.1,67,318,16.851552,25.811764,False
+VRE_faecalis,Vancomycin-resistant Enterococcus faecalis,111,Inpatient Rehabilitation Facilities,2011,11.4,4,35,3.738491,25.305361,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2024,58.9,2356,3997,57.4,60.5,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2024,79.5,116,146,72.3,85.4,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2024,,,,,,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2023,62,2642,4262,60.5,63.4,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2023,82.8,144,174,76.6,87.8,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2023,,,,,,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2022,66.3,2833,4273,64.9000015258789,67.69999694824219,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2022,85.3,197,231,80.30000305175781,89.4000015258789,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2022,,,,,,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2021,65.9,2879,4369,64.5,67.3,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2021,85,175,206,79.6,89.4,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2021,,,,,,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2020,64.2,2028,3159,62.513149,65.855832,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2020,85,199,234,80.034134,89.188757,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2020,,,,,,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2019,63.9,2105,3292,62.290559,65.570622,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2019,83.6,179,214,78.231671,88.153404,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2019,0,0,0,,,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2018,66.3,2293,3460,64.682788,67.833392,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2018,84.7,255,301,80.315682,88.454724,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2018,0,0,0,,,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2017,70,2517,3595,68.500355,71.495002,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2017,89.6,311,347,86.076163,92.515683,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2017,0,0,0,,,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2016,72.5,2846,3927,71.05908,73.853278,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2016,91.1,459,504,88.338355,93.333817,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2016,0,0,0,,,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2015,72.8,2974,4087,71.386324,74.115731,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2015,86.9,504,580,83.963249,89.461817,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2015,0,0,0,,,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2014,74,2592,3505,72.47864,75.384372,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2014,85.8,470,548,82.650101,88.506022,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2014,78.8,26,33,62.486244,90.22092,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2013,75.6,2605,3446,74.139481,77.007377,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2013,87.4,522,597,84.59437,89.918081,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2013,76.7,23,30,59.210599,89.181773,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2012,76,2466,3244,74.524721,77.463121,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2012,87.2,341,391,83.62157,90.253497,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2012,72,18,25,52.301788,86.849792,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,109,General Acute Care Hospitals,2011,79.7,1773,2224,78.011808,81.353464,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,110,Long Term Acute Care Hospitals,2011,88.3,197,223,83.616496,92.075037,False
+VRE_faecium,Vancomycin-resistant Enterococcus faecium,111,Inpatient Rehabilitation Facilities,2011,0,0,0,,,False

@@ -1,0 +1,177 @@
+{
+  "latest_year": 2024,
+  "first_year": 2011,
+  "n_places": 52,
+  "n_rows": 728,
+  "n_columns": 61,
+  "hospitals_latest": 4500,
+  "short_term_latest": 3132,
+  "critical_access_latest": 1368,
+  "small_latest": 2322,
+  "pct_small_latest": 51.6,
+  "rural_latest": 1792,
+  "pct_rural_latest": 39.8,
+  "small_rural_latest": 1507,
+  "pct_small_rural_latest": 33.5,
+  "cah_cms_urban_latest": 266,
+  "pct_cah_cms_urban_latest": 19.4,
+  "cah_over_25_beds_latest": 68,
+  "small_rural_or_cah_latest": 1773,
+  "pct_small_rural_or_cah_latest": 39.4,
+  "pct_beds_in_small_latest": 10.6,
+  "hospitals_first": 4876,
+  "states_majority_small_latest": 31,
+  "reported_cells_latest": {
+    "mrsa": 50,
+    "cre": 51,
+    "vre_faecalis": 49,
+    "vre_faecium": 36
+  },
+  "insufficient_cells_all_years": {
+    "mrsa": 68,
+    "cre": 39,
+    "vre_faecalis": 93,
+    "vre_faecium": 227
+  },
+  "excluded_tiny_by_year": {
+    "2011": 3,
+    "2012": 3,
+    "2013": 1,
+    "2014": 2,
+    "2015": 2,
+    "2016": 1,
+    "2017": 1,
+    "2018": 1,
+    "2019": 1,
+    "2020": 225,
+    "2021": 273,
+    "2022": 240,
+    "2023": 5,
+    "2024": 3
+  },
+  "top_mrsa_latest": [
+    {
+      "usps": "WV",
+      "state": "West Virginia",
+      "value": 64.4
+    },
+    {
+      "usps": "MS",
+      "state": "Mississippi",
+      "value": 58.2
+    },
+    {
+      "usps": "AR",
+      "state": "Arkansas",
+      "value": 55.3
+    },
+    {
+      "usps": "AL",
+      "state": "Alabama",
+      "value": 52.5
+    },
+    {
+      "usps": "LA",
+      "state": "Louisiana",
+      "value": 50.4
+    }
+  ],
+  "top_vre_faecium_latest": [
+    {
+      "usps": "AR",
+      "state": "Arkansas",
+      "value": 78.0
+    },
+    {
+      "usps": "NV",
+      "state": "Nevada",
+      "value": 77.4
+    },
+    {
+      "usps": "MA",
+      "state": "Massachusetts",
+      "value": 73.0
+    },
+    {
+      "usps": "LA",
+      "state": "Louisiana",
+      "value": 71.0
+    },
+    {
+      "usps": "AL",
+      "state": "Alabama",
+      "value": 70.9
+    }
+  ],
+  "top_cre_latest": [
+    {
+      "usps": "PR",
+      "state": "Puerto Rico",
+      "value": 43.2
+    },
+    {
+      "usps": "NV",
+      "state": "Nevada",
+      "value": 10.5
+    },
+    {
+      "usps": "ME",
+      "state": "Maine",
+      "value": 9.2
+    },
+    {
+      "usps": "DC",
+      "state": "District of Columbia",
+      "value": 8.4
+    },
+    {
+      "usps": "AZ",
+      "state": "Arizona",
+      "value": 6.9
+    }
+  ],
+  "top_small_rural_share_latest": [
+    {
+      "usps": "ND",
+      "state": "North Dakota",
+      "value": 84.1
+    },
+    {
+      "usps": "MT",
+      "state": "Montana",
+      "value": 82.3
+    },
+    {
+      "usps": "WY",
+      "state": "Wyoming",
+      "value": 81.5
+    },
+    {
+      "usps": "AK",
+      "state": "Alaska",
+      "value": 76.2
+    },
+    {
+      "usps": "SD",
+      "state": "South Dakota",
+      "value": 74.1
+    }
+  ],
+  "high_resistance_and_high_small_rural_latest": {
+    "mrsa": [
+      "AR",
+      "IA",
+      "KY",
+      "MS",
+      "NM"
+    ],
+    "cre": [
+      "ME",
+      "ND"
+    ],
+    "vre_faecium": [
+      "AR"
+    ]
+  },
+  "qa_failures": 0
+}
