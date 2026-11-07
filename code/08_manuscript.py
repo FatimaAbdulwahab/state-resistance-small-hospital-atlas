@@ -72,6 +72,10 @@ lang: en-US
 
 **Keywords:** antimicrobial resistance; MRSA; carbapenem-resistant Enterobacterales; vancomycin-resistant enterococci; National Healthcare Safety Network; critical access hospitals; rural health; Provider of Services file; open data
 
+```{{=openxml}}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
 # Abstract
 
 **Background.** Small and rural hospitals deliver a large share of U.S. inpatient care in many states, often with limited on-site microbiology, infectious disease expertise and rapid diagnostics. State resistance surveillance and federal hospital registries are published separately, so it has not been easy to see where resistance and a small-hospital network coincide.
@@ -81,6 +85,10 @@ lang: en-US
 **Results.** In {Y1}, {n(H['total_last'])} general hospitals were counted ({n(H['short_last'])} short-term, {n(H['cah_last'])} critical access). Hospitals with fewer than 100 beds made up {f(H['pct_small_last'])}% of hospitals but held {f(H['pct_beds_small_last'])}% of beds; {f(H['pct_small_rural_last'])}% were both small and rural. State resistance varied widely (MRSA state median {f(R['mrsa']['median_last'])}%; IQR {f(R['mrsa']['iqr_last'][0])}–{f(R['mrsa']['iqr_last'][1])}%). Across states, a larger small-and-rural share went with lower, not higher, percent resistant for all four organisms (CRE {rho('cre')}; MRSA {rho('mrsa')}). Within that gradient, Kentucky and Mississippi were in the top third of states for both MRSA resistance and small-and-rural share in all 14 years, and Arkansas in 13. States in the top third for small-and-rural share accounted for {n(SUPALL['high'])} of {n(tot_sup)} state-years in which CDC published no percent (fewer than 20 isolates). We also found two data pitfalls: older portal tables store suppressed cells as "0 of 0", and {f(H['pct_cah_cms_urban_last'])}% of critical access hospitals carry the CMS urban flag.
 
 **Conclusions.** Resistance among reported hospital infections is, on average, lower in states dominated by small and rural hospitals, but a persistent Southern group of states combines high MRSA resistance with a large small-and-rural hospital network, and resistance data are thinnest where small hospitals are most common. The atlas, code and an interactive map are openly available to guide where laboratory, stewardship and diagnostic support for small hospitals may reach the most facilities.
+
+```{{=openxml}}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
 
 # Introduction
 
@@ -209,6 +217,10 @@ Small hospitals make up half of U.S. general hospitals. Across states, resistanc
 **Author contributions (CRediT).** Fatima Abdulwahab: conceptualization, methodology, data curation, validation, formal analysis, visualization, writing (original draft, review and editing).
 
 **Use of AI tools.** Claude (Anthropic) assisted with code, data processing, figure generation and drafting. The author designed the study, made all analytic decisions, independently verified every table and number against the sources, and takes full responsibility for the content.
+
+```{{=openxml}}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
 
 # References
 

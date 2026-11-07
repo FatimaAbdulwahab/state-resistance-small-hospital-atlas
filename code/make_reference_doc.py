@@ -40,9 +40,22 @@ for nm in ["Image Caption", "Table Caption", "Caption"]:
 if "Verbatim Char" in S:  # inline code / file names
     font(S["Verbatim Char"], "Courier New", 9.5)
 # Fonts chosen so Word and the PDF render identically (Liberation fonts are metric-compatible).
+PREPRINT = os.environ.get("PREPRINT_LAYOUT", "1") == "1"
+if PREPRINT:  # preprint submission layout: double-spaced body for line-numbered review
+    for nm in ["Normal", "Body Text", "First Paragraph"]:
+        S[nm].paragraph_format.line_spacing = 2.0
 for sec in d.sections:
+    if PREPRINT:
+        hp = sec.header.paragraphs[0] if sec.header.paragraphs else sec.header.add_paragraph()
+        hp.alignment = 2
+        hr = hp.add_run("Preprint, not peer reviewed · Abdulwahab · State atlas of hospital resistance and small hospitals")
+        hr.font.size = Pt(8); hr.font.name = "Arial"; hr.font.color.rgb = RGBColor.from_string("666666")
     sec.page_width, sec.page_height = Inches(8.5), Inches(11)
     for m in ("left_margin", "right_margin", "top_margin", "bottom_margin"): setattr(sec, m, Inches(1))
+    if PREPRINT:  # continuous line numbers; schema position is right after pgMar
+        ln = OxmlElement("w:lnNumType")
+        ln.set(qn("w:countBy"), "1"); ln.set(qn("w:restart"), "continuous"); ln.set(qn("w:distance"), "360")
+        pm = sec._sectPr.find(qn("w:pgMar")); pm.addnext(ln)
     p = sec.footer.paragraphs[0] if sec.footer.paragraphs else sec.footer.add_paragraph()
     p.alignment = 1
     r = p.add_run()

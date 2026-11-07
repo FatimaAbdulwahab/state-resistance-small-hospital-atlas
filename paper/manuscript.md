@@ -13,6 +13,10 @@ lang: en-US
 
 **Keywords:** antimicrobial resistance; MRSA; carbapenem-resistant Enterobacterales; vancomycin-resistant enterococci; National Healthcare Safety Network; critical access hospitals; rural health; Provider of Services file; open data
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
 # Abstract
 
 **Background.** Small and rural hospitals deliver a large share of U.S. inpatient care in many states, often with limited on-site microbiology, infectious disease expertise and rapid diagnostics. State resistance surveillance and federal hospital registries are published separately, so it has not been easy to see where resistance and a small-hospital network coincide.
@@ -22,6 +26,10 @@ lang: en-US
 **Results.** In 2024, 4,500 general hospitals were counted (3,132 short-term, 1,368 critical access). Hospitals with fewer than 100 beds made up 51.6% of hospitals but held 10.6% of beds; 33.5% were both small and rural. State resistance varied widely (MRSA state median 37.0%; IQR 31.6–42.7%). Across states, a larger small-and-rural share went with lower, not higher, percent resistant for all four organisms (CRE ρ = -0.57, p < 0.001, n = 51; MRSA ρ = -0.30, p = 0.032, n = 50). Within that gradient, Kentucky and Mississippi were in the top third of states for both MRSA resistance and small-and-rural share in all 14 years, and Arkansas in 13. States in the top third for small-and-rural share accounted for 288 of 427 state-years in which CDC published no percent (fewer than 20 isolates). We also found two data pitfalls: older portal tables store suppressed cells as "0 of 0", and 19.4% of critical access hospitals carry the CMS urban flag.
 
 **Conclusions.** Resistance among reported hospital infections is, on average, lower in states dominated by small and rural hospitals, but a persistent Southern group of states combines high MRSA resistance with a large small-and-rural hospital network, and resistance data are thinnest where small hospitals are most common. The atlas, code and an interactive map are openly available to guide where laboratory, stewardship and diagnostic support for small hospitals may reach the most facilities.
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
 
 # Introduction
 
@@ -150,6 +158,10 @@ Small hospitals make up half of U.S. general hospitals. Across states, resistanc
 **Author contributions (CRediT).** Fatima Abdulwahab: conceptualization, methodology, data curation, validation, formal analysis, visualization, writing (original draft, review and editing).
 
 **Use of AI tools.** Claude (Anthropic) assisted with code, data processing, figure generation and drafting. The author designed the study, made all analytic decisions, independently verified every table and number against the sources, and takes full responsibility for the content.
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
 
 # References
 
