@@ -288,5 +288,23 @@ cmd = ["pandoc", "manuscript.md", "-o", "manuscript.docx", "--resource-path=."]
 if os.path.exists(ref):
     cmd.append("--reference-doc=reference.docx")
 subprocess.run(cmd, cwd=PAPER, check=True)
+# Re-save through LibreOffice: writes schema-valid Word XML (pandoc's output has
+# element-order issues Word may "repair"), then render the matching PDF from it.
+import shutil, tempfile, zipfile
+if shutil.which("soffice") or shutil.which("libreoffice"):
+    exe = shutil.which("soffice") or shutil.which("libreoffice")
+    name = "Abdulwahab_State_Resistance_Atlas_preprint"
+    with tempfile.TemporaryDirectory() as tmp:
+        shutil.copy(os.path.join(PAPER, "manuscript.docx"), os.path.join(tmp, name + ".docx"))
+        subprocess.run([exe, "--headless", f"-env:UserInstallation=file://{tmp}/profile", "--convert-to", "docx:MS Word 2007 XML",
+                        "--outdir", os.path.join(tmp, "out"), os.path.join(tmp, name + ".docx")], check=True, capture_output=True)
+        src = os.path.join(tmp, "out", name + ".docx"); dst = os.path.join(PAPER, name + ".docx")
+        with zipfile.ZipFile(src) as zi, zipfile.ZipFile(dst, "w", zipfile.ZIP_DEFLATED) as zo:
+            for item in zi.infolist():
+                if not item.filename.endswith("/"):  # drop folder entries
+                    zo.writestr(item, zi.read(item.filename))
+        subprocess.run([exe, "--headless", f"-env:UserInstallation=file://{tmp}/profile", "--convert-to", "pdf",
+                        "--outdir", PAPER, dst], check=True, capture_output=True)
+    print(f"wrote paper/{name}.docx and .pdf (validated Word XML, matching PDF)")
 words = len(md.split("# References")[0].split())
 print(f"wrote paper/manuscript.md and paper/manuscript.docx; main text ~{words} words; template={'yes' if os.path.exists(ref) else 'default'}")

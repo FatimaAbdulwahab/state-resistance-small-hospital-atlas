@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Make paper/reference.docx: the default preprint style used by 08_manuscript.py
-(serif body, sans headings, US Letter, 1-inch margins, page numbers). Replace
+(Times New Roman body, Arial headings, US Letter, 1-inch margins, page numbers). Replace
 paper/reference.docx with any Word template to restyle the manuscript."""
 import os, subprocess
 from docx import Document
@@ -24,7 +24,7 @@ def font(st, name, size, bold=None, color=None, italic=None):
 S = {st.name: st for st in d.styles}
 for nm in ["Normal", "Body Text", "First Paragraph"]:
     if nm in S:
-        font(S[nm], "Georgia", 10.5)
+        font(S[nm], "Times New Roman", 11)
         pf = S[nm].paragraph_format; pf.space_after = Pt(6); pf.line_spacing = 1.2
 if "Compact" in S:  # table cells
     font(S["Compact"], "Arial", 8.5); S["Compact"].paragraph_format.space_after = Pt(1); S["Compact"].paragraph_format.line_spacing = 1.05
@@ -37,6 +37,9 @@ for nm, sz, before in [("Heading 1", 13, 16), ("Heading 2", 11, 12), ("Heading 3
 for nm in ["Image Caption", "Table Caption", "Caption"]:
     if nm in S:
         font(S[nm], "Arial", 8.5, italic=False, color="222222"); S[nm].paragraph_format.space_after = Pt(10)
+if "Verbatim Char" in S:  # inline code / file names
+    font(S["Verbatim Char"], "Courier New", 9.5)
+# Fonts chosen so Word and the PDF render identically (Liberation fonts are metric-compatible).
 for sec in d.sections:
     sec.page_width, sec.page_height = Inches(8.5), Inches(11)
     for m in ("left_margin", "right_margin", "top_margin", "bottom_margin"): setattr(sec, m, Inches(1))
