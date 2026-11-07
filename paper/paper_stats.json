@@ -1,0 +1,999 @@
+{
+  "first_year": 2011,
+  "last_year": 2024,
+  "n_places": 52,
+  "n_rows": 728,
+  "hosp": {
+    "total_last": 4500,
+    "total_first": 4876,
+    "short_last": 3132,
+    "short_first": 3546,
+    "cah_last": 1368,
+    "cah_first": 1330,
+    "small_last": 2322,
+    "pct_small_last": 51.6,
+    "rural_last": 1792,
+    "pct_rural_last": 39.8,
+    "small_rural_last": 1507,
+    "pct_small_rural_last": 33.5,
+    "small_rural_or_cah_last": 1773,
+    "pct_small_rural_or_cah_last": 39.4,
+    "beds_last": 800576,
+    "pct_beds_small_last": 10.6,
+    "pct_beds_rural_last": 12.7,
+    "lt200_last": 3101,
+    "pct_lt200_last": 68.9,
+    "states_majority_small": 31,
+    "states_majority_small_rural": 13,
+    "median_state_pct_small": 57.2,
+    "median_state_pct_small_rural": 35.2,
+    "iqr_state_pct_small_rural": [
+      15.6,
+      50.2
+    ],
+    "min_state_small_rural": {
+      "usps": "DC",
+      "value": 0.0
+    },
+    "states_zero_small_rural": [
+      "DC",
+      "DE",
+      "NJ",
+      "PR",
+      "RI"
+    ],
+    "max_state_small_rural": {
+      "usps": "ND",
+      "value": 84.1
+    },
+    "cah_cms_urban_last": 266,
+    "pct_cah_cms_urban_last": 19.4,
+    "cah_over_25_last": 68,
+    "cah_max_beds_last": 138,
+    "cah_median_beds_last": 25.0
+  },
+  "bed_bands_last": {
+    "1_24": {
+      "hospitals": 563,
+      "beds": 9145,
+      "pct_hospitals": 12.5,
+      "pct_beds": 1.1
+    },
+    "25_49": {
+      "hospitals": 1221,
+      "beds": 35085,
+      "pct_hospitals": 27.1,
+      "pct_beds": 4.4
+    },
+    "50_99": {
+      "hospitals": 538,
+      "beds": 40306,
+      "pct_hospitals": 12.0,
+      "pct_beds": 5.0
+    },
+    "100_199": {
+      "hospitals": 779,
+      "beds": 112296,
+      "pct_hospitals": 17.3,
+      "pct_beds": 14.0
+    },
+    "200_399": {
+      "hospitals": 842,
+      "beds": 242196,
+      "pct_hospitals": 18.7,
+      "pct_beds": 30.3
+    },
+    "400_plus": {
+      "hospitals": 557,
+      "beds": 361548,
+      "pct_hospitals": 12.4,
+      "pct_beds": 45.2
+    }
+  },
+  "excluded_tiny": {
+    "2011": 3,
+    "2012": 3,
+    "2013": 1,
+    "2014": 2,
+    "2015": 2,
+    "2016": 1,
+    "2017": 1,
+    "2018": 1,
+    "2019": 1,
+    "2020": 225,
+    "2021": 273,
+    "2022": 240,
+    "2023": 5,
+    "2024": 3
+  },
+  "excluded_tiny_2020_2022_total": 738,
+  "excluded_tiny_tx_max": {
+    "year": 2021,
+    "n": 145
+  },
+  "change_total_pct": -7.7,
+  "change_short_pct": -11.7,
+  "res": {
+    "mrsa": {
+      "reported_last": 50,
+      "insufficient_last": 2,
+      "insufficient_last_states": [
+        "AK",
+        "WY"
+      ],
+      "insufficient_all": 68,
+      "pooled_states_last": 38.2,
+      "n_tested_last": 9557,
+      "n_resistant_last": 3650,
+      "median_last": 37.0,
+      "iqr_last": [
+        31.6,
+        42.7
+      ],
+      "max_last": {
+        "usps": "WV",
+        "state": "West Virginia",
+        "value": 64.4,
+        "r": 38,
+        "n": 59
+      },
+      "min_last": {
+        "usps": "ND",
+        "state": "North Dakota",
+        "value": 14.3,
+        "r": 4,
+        "n": 28
+      },
+      "median_n_tested_last": 116.0,
+      "n_tested_all_years": 155035,
+      "zero_resistant_reported_all": 0,
+      "series_pooled": {
+        "2011": 46.7,
+        "2012": 46.9,
+        "2013": 47.0,
+        "2014": 45.1,
+        "2015": 45.9,
+        "2016": 44.4,
+        "2017": 42.9,
+        "2018": 42.2,
+        "2019": 40.7,
+        "2020": 40.6,
+        "2021": 40.0,
+        "2022": 38.1,
+        "2023": 38.1,
+        "2024": 38.2
+      },
+      "state_share_of_national_isolates": 99.5
+    },
+    "cre": {
+      "reported_last": 51,
+      "insufficient_last": 1,
+      "insufficient_last_states": [
+        "WY"
+      ],
+      "insufficient_all": 39,
+      "pooled_states_last": 3.3,
+      "n_tested_last": 23663,
+      "n_resistant_last": 773,
+      "median_last": 2.3,
+      "iqr_last": [
+        1.5,
+        3.8
+      ],
+      "max_last": {
+        "usps": "PR",
+        "state": "Puerto Rico",
+        "value": 43.2,
+        "r": 118,
+        "n": 273
+      },
+      "min_last": {
+        "usps": "AR",
+        "state": "Arkansas",
+        "value": 0.0,
+        "r": 0,
+        "n": 199
+      },
+      "median_n_tested_last": 297.0,
+      "n_tested_all_years": 323760,
+      "zero_resistant_reported_all": 129,
+      "series_pooled": {
+        "2011": 4.3,
+        "2012": 3.1,
+        "2013": 3.9,
+        "2014": 3.2,
+        "2015": 3.4,
+        "2016": 3.0,
+        "2017": 2.6,
+        "2018": 2.7,
+        "2019": 2.4,
+        "2020": 2.7,
+        "2021": 2.7,
+        "2022": 3.2,
+        "2023": 3.2,
+        "2024": 3.3
+      },
+      "state_share_of_national_isolates": 99.8
+    },
+    "vre_faecalis": {
+      "reported_last": 49,
+      "insufficient_last": 3,
+      "insufficient_last_states": [
+        "AK",
+        "RI",
+        "WY"
+      ],
+      "insufficient_all": 93,
+      "pooled_states_last": 3.6,
+      "n_tested_last": 7514,
+      "n_resistant_last": 272,
+      "median_last": 2.9,
+      "iqr_last": [
+        0.0,
+        4.7
+      ],
+      "max_last": {
+        "usps": "ME",
+        "state": "Maine",
+        "value": 22.2,
+        "r": 6,
+        "n": 27
+      },
+      "min_last": {
+        "usps": "AR",
+        "state": "Arkansas",
+        "value": 0.0,
+        "r": 0,
+        "n": 94
+      },
+      "median_n_tested_last": 94.0,
+      "n_tested_all_years": 114223,
+      "zero_resistant_reported_all": 109,
+      "series_pooled": {
+        "2011": 7.9,
+        "2012": 6.8,
+        "2013": 7.0,
+        "2014": 6.6,
+        "2015": 7.7,
+        "2016": 6.1,
+        "2017": 5.3,
+        "2018": 4.9,
+        "2019": 4.2,
+        "2020": 3.5,
+        "2021": 3.4,
+        "2022": 3.9,
+        "2023": 3.6,
+        "2024": 3.6
+      },
+      "state_share_of_national_isolates": 99.1
+    },
+    "vre_faecium": {
+      "reported_last": 36,
+      "insufficient_last": 16,
+      "insufficient_last_states": [
+        "AK",
+        "DC",
+        "DE",
+        "HI",
+        "ID",
+        "KS",
+        "ME",
+        "MT",
+        "ND",
+        "NH",
+        "PR",
+        "RI",
+        "SD",
+        "UT",
+        "VT",
+        "WY"
+      ],
+      "insufficient_all": 227,
+      "pooled_states_last": 60.1,
+      "n_tested_last": 4003,
+      "n_resistant_last": 2405,
+      "median_last": 59.9,
+      "iqr_last": [
+        55.0,
+        65.6
+      ],
+      "max_last": {
+        "usps": "AR",
+        "state": "Arkansas",
+        "value": 78.0,
+        "r": 46,
+        "n": 59
+      },
+      "min_last": {
+        "usps": "CO",
+        "state": "Colorado",
+        "value": 27.8,
+        "r": 10,
+        "n": 36
+      },
+      "median_n_tested_last": 62.5,
+      "n_tested_all_years": 53794,
+      "zero_resistant_reported_all": 0,
+      "series_pooled": {
+        "2011": 80.6,
+        "2012": 77.5,
+        "2013": 77.7,
+        "2014": 75.7,
+        "2015": 74.7,
+        "2016": 75.1,
+        "2017": 72.0,
+        "2018": 68.1,
+        "2019": 65.5,
+        "2020": 66.1,
+        "2021": 67.3,
+        "2022": 67.7,
+        "2023": 63.1,
+        "2024": 60.1
+      },
+      "state_share_of_national_isolates": 96.7
+    }
+  },
+  "vre_pooled_last": {
+    "computable": 36,
+    "pooled": 24.0,
+    "median": 22.0
+  },
+  "national_by_facility_last": {
+    "CRE": {
+      "General Acute Care Hospitals": 3.1,
+      "Inpatient Rehabilitation Facilities": 1.2,
+      "Long Term Acute Care Hospitals": 8.7
+    },
+    "MRSA": {
+      "General Acute Care Hospitals": 37.7,
+      "Inpatient Rehabilitation Facilities": 68.0,
+      "Long Term Acute Care Hospitals": 70.1
+    },
+    "VRE_faecalis": {
+      "General Acute Care Hospitals": 3.2,
+      "Inpatient Rehabilitation Facilities": 0.0,
+      "Long Term Acute Care Hospitals": 19.5
+    },
+    "VRE_faecium": {
+      "General Acute Care Hospitals": 58.9,
+      "Inpatient Rehabilitation Facilities": null,
+      "Long Term Acute Care Hospitals": 79.5
+    }
+  },
+  "national_by_facility_n_last": {
+    "CRE": {
+      "General Acute Care Hospitals": 22098,
+      "Inpatient Rehabilitation Facilities": 692,
+      "Long Term Acute Care Hospitals": 883
+    },
+    "MRSA": {
+      "General Acute Care Hospitals": 9420,
+      "Inpatient Rehabilitation Facilities": 25,
+      "Long Term Acute Care Hospitals": 134
+    },
+    "VRE_faecalis": {
+      "General Acute Care Hospitals": 7228,
+      "Inpatient Rehabilitation Facilities": 90,
+      "Long Term Acute Care Hospitals": 221
+    },
+    "VRE_faecium": {
+      "General Acute Care Hospitals": 3997,
+      "Inpatient Rehabilitation Facilities": null,
+      "Long Term Acute Care Hospitals": 146
+    }
+  },
+  "suppression_by_small_rural_tertile_last": {
+    "mrsa": {
+      "low": 0,
+      "middle": 0,
+      "high": 2
+    },
+    "cre": {
+      "low": 0,
+      "middle": 0,
+      "high": 1
+    },
+    "vre_faecalis": {
+      "low": 1,
+      "middle": 0,
+      "high": 2
+    },
+    "vre_faecium": {
+      "low": 4,
+      "middle": 3,
+      "high": 9
+    }
+  },
+  "tertile_sizes": {
+    "low": 18,
+    "middle": 17,
+    "high": 17
+  },
+  "tertile_cutpoints_last": [
+    27.7,
+    46.2
+  ],
+  "suppression_by_tertile_all_years": {
+    "mrsa": {
+      "low": 12,
+      "middle": 7,
+      "high": 49
+    },
+    "cre": {
+      "low": 5,
+      "middle": 2,
+      "high": 32
+    },
+    "vre_faecalis": {
+      "low": 11,
+      "middle": 10,
+      "high": 72
+    },
+    "vre_faecium": {
+      "low": 50,
+      "middle": 42,
+      "high": 135
+    }
+  },
+  "suppression_all_org_all_years_by_tertile": {
+    "low": 78,
+    "middle": 61,
+    "high": 288
+  },
+  "assoc_last": {
+    "mrsa": {
+      "small_rural": {
+        "rho": -0.3,
+        "p": 0.032,
+        "n": 50
+      },
+      "small_rural_or_cah": {
+        "rho": -0.3,
+        "p": 0.036,
+        "n": 50
+      },
+      "small": {
+        "rho": -0.3,
+        "p": 0.031,
+        "n": 50
+      },
+      "beds_in_small": {
+        "rho": -0.26,
+        "p": 0.071,
+        "n": 50
+      },
+      "by_year_small_rural": {
+        "2011": {
+          "rho": -0.18,
+          "p": 0.247,
+          "n": 42
+        },
+        "2012": {
+          "rho": -0.21,
+          "p": 0.182,
+          "n": 44
+        },
+        "2013": {
+          "rho": -0.23,
+          "p": 0.137,
+          "n": 45
+        },
+        "2014": {
+          "rho": -0.33,
+          "p": 0.025,
+          "n": 46
+        },
+        "2015": {
+          "rho": -0.32,
+          "p": 0.027,
+          "n": 48
+        },
+        "2016": {
+          "rho": -0.36,
+          "p": 0.01,
+          "n": 49
+        },
+        "2017": {
+          "rho": -0.16,
+          "p": 0.29,
+          "n": 48
+        },
+        "2018": {
+          "rho": -0.4,
+          "p": 0.006,
+          "n": 46
+        },
+        "2019": {
+          "rho": -0.17,
+          "p": 0.245,
+          "n": 49
+        },
+        "2020": {
+          "rho": -0.22,
+          "p": 0.14,
+          "n": 48
+        },
+        "2021": {
+          "rho": -0.2,
+          "p": 0.171,
+          "n": 48
+        },
+        "2022": {
+          "rho": -0.25,
+          "p": 0.092,
+          "n": 48
+        },
+        "2023": {
+          "rho": -0.16,
+          "p": 0.263,
+          "n": 49
+        },
+        "2024": {
+          "rho": -0.3,
+          "p": 0.032,
+          "n": 50
+        }
+      },
+      "by_year_range": [
+        -0.4,
+        -0.16
+      ],
+      "by_year_n_p_lt_05": 5,
+      "by_year_n_negative": 14
+    },
+    "cre": {
+      "small_rural": {
+        "rho": -0.57,
+        "p": 0.0,
+        "n": 51
+      },
+      "small_rural_or_cah": {
+        "rho": -0.55,
+        "p": 0.0,
+        "n": 51
+      },
+      "small": {
+        "rho": -0.58,
+        "p": 0.0,
+        "n": 51
+      },
+      "beds_in_small": {
+        "rho": -0.59,
+        "p": 0.0,
+        "n": 51
+      },
+      "by_year_small_rural": {
+        "2011": {
+          "rho": -0.52,
+          "p": 0.0,
+          "n": 42
+        },
+        "2012": {
+          "rho": -0.61,
+          "p": 0.0,
+          "n": 51
+        },
+        "2013": {
+          "rho": -0.51,
+          "p": 0.0,
+          "n": 48
+        },
+        "2014": {
+          "rho": -0.67,
+          "p": 0.0,
+          "n": 48
+        },
+        "2015": {
+          "rho": -0.61,
+          "p": 0.0,
+          "n": 49
+        },
+        "2016": {
+          "rho": -0.71,
+          "p": 0.0,
+          "n": 49
+        },
+        "2017": {
+          "rho": -0.65,
+          "p": 0.0,
+          "n": 49
+        },
+        "2018": {
+          "rho": -0.46,
+          "p": 0.001,
+          "n": 50
+        },
+        "2019": {
+          "rho": -0.64,
+          "p": 0.0,
+          "n": 50
+        },
+        "2020": {
+          "rho": -0.42,
+          "p": 0.002,
+          "n": 51
+        },
+        "2021": {
+          "rho": -0.44,
+          "p": 0.001,
+          "n": 51
+        },
+        "2022": {
+          "rho": -0.36,
+          "p": 0.011,
+          "n": 50
+        },
+        "2023": {
+          "rho": -0.45,
+          "p": 0.001,
+          "n": 50
+        },
+        "2024": {
+          "rho": -0.57,
+          "p": 0.0,
+          "n": 51
+        }
+      },
+      "by_year_range": [
+        -0.71,
+        -0.36
+      ],
+      "by_year_n_p_lt_05": 14,
+      "by_year_n_negative": 14
+    },
+    "vre_faecalis": {
+      "small_rural": {
+        "rho": -0.43,
+        "p": 0.002,
+        "n": 49
+      },
+      "small_rural_or_cah": {
+        "rho": -0.45,
+        "p": 0.001,
+        "n": 49
+      },
+      "small": {
+        "rho": -0.46,
+        "p": 0.001,
+        "n": 49
+      },
+      "beds_in_small": {
+        "rho": -0.44,
+        "p": 0.002,
+        "n": 49
+      },
+      "by_year_small_rural": {
+        "2011": {
+          "rho": -0.34,
+          "p": 0.038,
+          "n": 38
+        },
+        "2012": {
+          "rho": -0.1,
+          "p": 0.536,
+          "n": 42
+        },
+        "2013": {
+          "rho": -0.53,
+          "p": 0.0,
+          "n": 44
+        },
+        "2014": {
+          "rho": -0.35,
+          "p": 0.02,
+          "n": 44
+        },
+        "2015": {
+          "rho": -0.49,
+          "p": 0.001,
+          "n": 45
+        },
+        "2016": {
+          "rho": -0.38,
+          "p": 0.01,
+          "n": 46
+        },
+        "2017": {
+          "rho": -0.21,
+          "p": 0.162,
+          "n": 45
+        },
+        "2018": {
+          "rho": -0.46,
+          "p": 0.001,
+          "n": 46
+        },
+        "2019": {
+          "rho": -0.43,
+          "p": 0.002,
+          "n": 47
+        },
+        "2020": {
+          "rho": -0.49,
+          "p": 0.0,
+          "n": 47
+        },
+        "2021": {
+          "rho": -0.6,
+          "p": 0.0,
+          "n": 48
+        },
+        "2022": {
+          "rho": -0.28,
+          "p": 0.053,
+          "n": 47
+        },
+        "2023": {
+          "rho": -0.27,
+          "p": 0.069,
+          "n": 47
+        },
+        "2024": {
+          "rho": -0.43,
+          "p": 0.002,
+          "n": 49
+        }
+      },
+      "by_year_range": [
+        -0.6,
+        -0.1
+      ],
+      "by_year_n_p_lt_05": 10,
+      "by_year_n_negative": 14
+    },
+    "vre_faecium": {
+      "small_rural": {
+        "rho": -0.34,
+        "p": 0.045,
+        "n": 36
+      },
+      "small_rural_or_cah": {
+        "rho": -0.36,
+        "p": 0.03,
+        "n": 36
+      },
+      "small": {
+        "rho": -0.34,
+        "p": 0.045,
+        "n": 36
+      },
+      "beds_in_small": {
+        "rho": -0.24,
+        "p": 0.157,
+        "n": 36
+      },
+      "by_year_small_rural": {
+        "2011": {
+          "rho": -0.08,
+          "p": 0.71,
+          "n": 27
+        },
+        "2012": {
+          "rho": -0.43,
+          "p": 0.009,
+          "n": 37
+        },
+        "2013": {
+          "rho": -0.29,
+          "p": 0.083,
+          "n": 37
+        },
+        "2014": {
+          "rho": -0.14,
+          "p": 0.393,
+          "n": 39
+        },
+        "2015": {
+          "rho": 0.01,
+          "p": 0.935,
+          "n": 38
+        },
+        "2016": {
+          "rho": -0.15,
+          "p": 0.368,
+          "n": 36
+        },
+        "2017": {
+          "rho": -0.12,
+          "p": 0.474,
+          "n": 37
+        },
+        "2018": {
+          "rho": -0.11,
+          "p": 0.546,
+          "n": 34
+        },
+        "2019": {
+          "rho": -0.16,
+          "p": 0.334,
+          "n": 37
+        },
+        "2020": {
+          "rho": 0.09,
+          "p": 0.622,
+          "n": 32
+        },
+        "2021": {
+          "rho": 0.05,
+          "p": 0.746,
+          "n": 38
+        },
+        "2022": {
+          "rho": -0.12,
+          "p": 0.455,
+          "n": 39
+        },
+        "2023": {
+          "rho": 0.07,
+          "p": 0.685,
+          "n": 34
+        },
+        "2024": {
+          "rho": -0.34,
+          "p": 0.045,
+          "n": 36
+        }
+      },
+      "by_year_range": [
+        -0.43,
+        0.09
+      ],
+      "by_year_n_p_lt_05": 2,
+      "by_year_n_negative": 10
+    }
+  },
+  "assoc_last_cre_no_pr": {
+    "rho": -0.54,
+    "p": 0.0,
+    "n": 50
+  },
+  "overlap_last": {
+    "mrsa": {
+      "threshold_resistance": 39.2,
+      "threshold_small_rural": 46.2,
+      "states": [
+        {
+          "usps": "AR",
+          "state": "Arkansas",
+          "res": 55.3,
+          "small_rural": 46.5,
+          "hosp": 71,
+          "small_rural_n": 33,
+          "cah": 27
+        },
+        {
+          "usps": "IA",
+          "state": "Iowa",
+          "res": 39.3,
+          "small_rural": 66.4,
+          "hosp": 113,
+          "small_rural_n": 75,
+          "cah": 83
+        },
+        {
+          "usps": "KY",
+          "state": "Kentucky",
+          "res": 45.2,
+          "small_rural": 48.3,
+          "hosp": 89,
+          "small_rural_n": 43,
+          "cah": 30
+        },
+        {
+          "usps": "MS",
+          "state": "Mississippi",
+          "res": 58.2,
+          "small_rural": 47.1,
+          "hosp": 87,
+          "small_rural_n": 41,
+          "cah": 29
+        },
+        {
+          "usps": "NM",
+          "state": "New Mexico",
+          "res": 40.7,
+          "small_rural": 59.0,
+          "hosp": 39,
+          "small_rural_n": 23,
+          "cah": 13
+        }
+      ],
+      "n_small_rural_hospitals_in_overlap": 215
+    },
+    "cre": {
+      "threshold_resistance": 3.0,
+      "threshold_small_rural": 46.2,
+      "states": [
+        {
+          "usps": "ME",
+          "state": "Maine",
+          "res": 9.2,
+          "small_rural": 59.4,
+          "hosp": 32,
+          "small_rural_n": 19,
+          "cah": 18
+        },
+        {
+          "usps": "ND",
+          "state": "North Dakota",
+          "res": 3.1,
+          "small_rural": 84.1,
+          "hosp": 44,
+          "small_rural_n": 37,
+          "cah": 37
+        }
+      ],
+      "n_small_rural_hospitals_in_overlap": 56
+    },
+    "vre_faecalis": {
+      "threshold_resistance": 3.8,
+      "threshold_small_rural": 46.2,
+      "states": [
+        {
+          "usps": "KY",
+          "state": "Kentucky",
+          "res": 5.1,
+          "small_rural": 48.3,
+          "hosp": 89,
+          "small_rural_n": 43,
+          "cah": 30
+        },
+        {
+          "usps": "ME",
+          "state": "Maine",
+          "res": 22.2,
+          "small_rural": 59.4,
+          "hosp": 32,
+          "small_rural_n": 19,
+          "cah": 18
+        }
+      ],
+      "n_small_rural_hospitals_in_overlap": 62
+    },
+    "vre_faecium": {
+      "threshold_resistance": 64.0,
+      "threshold_small_rural": 46.2,
+      "states": [
+        {
+          "usps": "AR",
+          "state": "Arkansas",
+          "res": 78.0,
+          "small_rural": 46.5,
+          "hosp": 71,
+          "small_rural_n": 33,
+          "cah": 27
+        }
+      ],
+      "n_small_rural_hospitals_in_overlap": 33
+    }
+  },
+  "mrsa_overlap_years_by_state": {
+    "KY": 14,
+    "MS": 14,
+    "AR": 13,
+    "KS": 3,
+    "NE": 2,
+    "IA": 2,
+    "ID": 1,
+    "SD": 1,
+    "ND": 1,
+    "NM": 1
+  },
+  "sensitivity_small_cutoff_last": {
+    "50": {
+      "n": 1784,
+      "pct": 39.6,
+      "pct_beds": 5.5
+    },
+    "100": {
+      "n": 2322,
+      "pct": 51.6,
+      "pct_beds": 10.6
+    },
+    "200": {
+      "n": 3101,
+      "pct": 68.9,
+      "pct_beds": 24.6
+    }
+  }
+}
